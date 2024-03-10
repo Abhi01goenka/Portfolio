@@ -1,11 +1,46 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+import React from "react";
+import { SparklesCore } from "../components/ui/sparkles";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import { words } from "../components/typewriter_items";
+import { WavyBackground } from "../components/ui/wavy-background";
+import { motion } from "framer-motion";
+import { LampContainer } from "../components/ui/lamp";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
+import { whoami } from "../components/text-generate_items.js"
+import {
+    TextRevealCard,
+    TextRevealCardDescription,
+    TextRevealCardTitle,
+} from "../components/ui/text-reveal-card";
 
-## What is Nextra?
+<WavyBackground className="max-w-4xl mx-auto pb-40" >
+    <p className="text-2xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center" >
+    Welcome to my Portfolio
+    </p>
+</WavyBackground>
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+<div div div div className ="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md" >
+    {/* <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20" ></h1> */}
+    <TypewriterEffectSmooth words={words} />
+    <div className="w-[40rem] h-40 relative">
+    {/* Gradients */}
+    <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+    <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+    <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+    <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
-## Documentation
+    {/* Core component */}
+    <SparklesCore
+        background="transparent"
+        minSize={0.4}
+        maxSize={1}
+        particleDensity={1200}
+        className="w-full h-full"
+        particleColor="#FFFFFF"
+    />
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+    {/* Radial Gradient to prevent sharp edges */}
+    <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+    </div>
+</div>
+
